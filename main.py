@@ -10,10 +10,10 @@ from tensorflow.keras.applications.mobilenet import preprocess_input, MobileNet
 from torchvision import transforms
 
 # Load models
-mobilenet_model_path = r'C:\Users\HP\Potato_disease\models\MobileNetV2 - 16 juin\saved model\mobilenetv2_plant_disease.h5'
+mobilenet_model_path = r'mobilenetv2_plant_disease.h5'
 mobilenet_model = tf.keras.models.load_model(mobilenet_model_path)
 
-lightgbm_model_path = r'C:/Users/HP/Potato_disease/models/lightgbm/lgb_model.txt'
+lightgbm_model_path = r'lgb_model.txt'
 lightgbm_model = lgb.Booster(model_file=lightgbm_model_path)
 
 mobilenet_feature_model = MobileNet(weights='imagenet', include_top=False, pooling='avg', input_shape=(224, 224, 3))
