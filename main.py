@@ -18,8 +18,8 @@ lightgbm_model = lgb.Booster(model_file=lightgbm_model_path)
 
 mobilenet_feature_model = MobileNet(weights='imagenet', include_top=False, pooling='avg', input_shape=(224, 224, 3))
 
-onnx_model_path = r'C:\Users\HP\Potato_disease\models\Google ViT\onnx infrence\plant_disease_vit (1).onnx'
-onnx_session = onnxruntime.InferenceSession(onnx_model_path)
+#onnx_model_path = r'C:\Users\HP\Potato_disease\models\Google ViT\onnx infrence\plant_disease_vit (1).onnx'
+#onnx_session = onnxruntime.InferenceSession(onnx_model_path)
 
 # Class names
 class_names = [
